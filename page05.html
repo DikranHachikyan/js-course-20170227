@@ -4,9 +4,23 @@
 	<meta charset="UTF-8">
 	<title>Examples</title>
 	<script type="text/javascript">
-	<!--	
-		document.write('<h1>Hello JS!</h1>');
-     -->
+	 //1. декларация на промелива
+	 var visitorName = '';
+
+	 //2. използваме я
+
+	 visitorName = window.prompt('Как се казвате?');
+
+	 if( visitorName == null || visitorName == '' ){
+	 	 visitorName = 'посетител';
+	 }
+	 else{
+	 	visitorName = '<em style="color:red">'+visitorName+'</em>';
+	 }
+
+	 document.write('<h1>Здравейте ' + visitorName + '!</h1>');
+		
+  
 	</script>
 </head>
 <body>
