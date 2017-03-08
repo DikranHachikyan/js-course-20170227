@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+	<script type="text/javascript">
+
+	 var helloMsg;
+	 //1. декларация на функция
+	 function showMessage(message, level){
+	 	if( typeof message != 'string' || message == ''  ){
+	 		//window.alert('Empty message or message is not a string');
+	 		console.log('Empty message or message is not a string');
+	 		message = 'hello';
+	 	}
+
+	 	if( level < 1 || level > 6){
+	 		console.log('Invalid value:', level);
+	 		level=2;
+	 	}
+	 	document.write('<h' + level + '>' + message + '</h' + level + '>');
+	 }
+  	
+  	 //2. извикваме функцията
+  	 showMessage('Успешна регистрация', 3);
+  	 showMessage(helloMsg,4);
+  	 showMessage('Проверете въведените данни', 8);
+	</script>
+</head>
+<body>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat temporibus facilis repellat recusandae inventore quam ipsam ducimus eligendi eveniet est labore debitis, perspiciatis dolores repellendus animi magni ab! Quidem, iure.</p>
+    
+	<!-- <h3>Quaerat temporibus facilis</h3> -->
+	<noscript>
+		Моля, разрешете използването на JS за да ползвате ....
+	</noscript>
+</body>
+</html>
