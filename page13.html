@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+
+</head>
+<body>
+	<h1>Site Title</h1>
+	<p>
+	Lorem ipsum dolor sit <span>amet</span>, consectetur adipisicing elit. Quaerat temporibus facilis <a href="http://dir.bg" title="Link">repellat</a> recusandae inventore quam ipsam ducimus eligendi eveniet est labore debitis, perspiciatis dolores repellendus animi magni ab! Quidem, iure.
+	</p>
+	<p>
+	Lorem ipsum dolor sit <span>amet</span>, consectetur adipisicing elit. Quaerat temporibus facilis <a href="http://dir.bg" title="Link">repellat</a> recusandae inventore quam ipsam ducimus eligendi eveniet est labore debitis, perspiciatis dolores repellendus animi magni ab! Quidem, iure.
+	</p>
+	<p>
+	Lorem ipsum dolor sit <span>amet</span>, consectetur adipisicing elit. Quaerat temporibus facilis <a href="http://dir.bg" title="Link">repellat</a> recusandae inventore quam ipsam ducimus eligendi eveniet est labore debitis, perspiciatis dolores repellendus animi magni ab! Quidem, iure.
+	</p>
+	
+
+    
+	<!-- <h3>Quaerat temporibus facilis</h3> -->
+	<noscript>
+		Моля, разрешете използването на JS за да ползвате ....
+	</noscript>
+<!--  Scripts  -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('p').append('<a href="#">Read More</a>');	
+			$('p').prepend('<strong>Article:</strong>');
+			$('p').before('<h2>Acticle Title</h2>');	
+			$('p').after('<hr>');
+			//-----------------------------
+			//$('h1').html('Lorem <em>ipsum</em> dolor <em>sit</em>');	
+			$('h1').text('Lorem <em>ipsum</em> dolor <em>sit</em>');	
+		});//on document ready
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+
+</head>
+<body>
+	
+	<p class="txt">
+	Lorem ipsum dolor sit <span>amet</span>, consectetur adipisicing elit. Quaerat temporibus facilis <a href="http://dir.bg" title="Link">repellat</a> recusandae inventore quam ipsam ducimus eligendi eveniet est labore debitis, perspiciatis dolores repellendus animi magni ab! Quidem, iure.
+	</p>
+	<div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, perspiciatis, fugiat! Voluptate incidunt, doloremque. Dolore rem officia amet aspernatur reiciendis, perspiciatis natus tempore exercitationem, obcaecati consectetur soluta quae mollitia expedita?
+	</div>
+	<div>Quidem libero nobis <span>praesentium</span> qui nostrum <a href="http://dir.bg">voluptas</a> fuga a minus, quibusdam, sunt dolores fugit saepe cum esse mollitia, quo ad. Modi dolorem similique nam voluptates numquam, laborum praesentium iure minima.
+	</div>
+	<p class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet voluptatem, non, illum soluta aliquid fugiat dolorem obcaecati, impedit dolorum quaerat minima ratione, alias sapiente quibusdam dolor illo? Pariatur, qui exercitationem.
+	</p>
+	<p>Sint labore inventore est amet quasi? Enim sunt <a href="http://dir.bg" title="Link">exercitationem</a> velit hic atque ad soluta incidunt fugit assumenda voluptas iure ut impedit, excepturi eos dicta accusantium aperiam. Illo, cupiditate exercitationem vel.
+	</p>
+	<p>Dolorem suscipit, fuga <a href="#">voluptatum animi</a> commodi totam mollitia cupiditate quia dicta voluptatem officia architecto quos at pariatur ipsum itaque dolores, placeat eum nesciunt laboriosam ab porro libero! Dolorum, tempore, rem.
+	</p>
+
+    
+	<!-- <h3>Quaerat temporibus facilis</h3> -->
+	<noscript>
+		Моля, разрешете използването на JS за да ползвате ....
+	</noscript>
+<!--  Scripts  -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('p').css('border','2px solid red');
+			$('p span').css('background-color','yellow');
+			$('div + p').css('background-color','#ccc');
+
+			//-----------------------------------------
+			
+			$('a[title]').css('text-decoration', 'none');
+			$('a[href^="http"]').css('background-color', 'red');
+		});//on document ready
+	</script>
+</body>
+</html>

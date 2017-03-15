@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+	<style>
+		h1 {
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Site Title</h1>
+	
+	<a href="#">Тук ще се появи текста</a>
+
+	<!-- <h3>Quaerat temporibus facilis</h3> -->
+	<noscript>
+		Моля, разрешете използването на JS за да ползвате ....
+	</noscript>
+<!--  Scripts  -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var siteURL='';
+			var linkText = 'Моят любим сайт';
+	 		siteURL = window.prompt('Кой е любимит ви сайт?');
+	 		$('a').attr('href', 'http://' + siteURL);
+	 		$('a').html(linkText);
+		});//on document ready
+	</script>
+</body>
+</html>
