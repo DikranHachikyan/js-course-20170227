@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+</head>
+<body>
+	<a href="#">
+		<img src="./pics-large/pic1-320x240.jpg" alt="">
+	</a>
+	<a href="#">
+		<img src="./pics-large/pic1-320x240.jpg" alt="">
+	</a>
+	<a href="#">
+		<img src="./pics-large/pic1-320x240.jpg" alt="">
+	</a>
+	<h2 onmouseover="this.innerHTML='City Centre'">Hello World</h2>	
+	<noscript>
+		Моля, разрешете използването на JS за да ползвате ....
+	</noscript>
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('img')
+				.mouseover(function(){
+					$(this).attr('src','./pics-large/pic2-320x240.jpg');	
+				})
+				.mouseout(function(){
+					$(this).attr('src', './pics-large/pic1-320x240.jpg');
+				});//on mouse out
+		});//on document ready
+	</script>
+</body>
+</html>

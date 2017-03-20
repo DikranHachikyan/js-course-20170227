@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+</head>
+<body>
+	<h1>FAQ</h1>
+	<dl>
+		<dt><a href="#">Lorem ipsum dolor sit amet?</a></dt>
+		<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quam. Fugit adipisci quas ducimus vero unde. Ab culpa autem amet voluptatem natus, praesentium magnam ea nisi doloremque deleniti mollitia provident.</dd>
+		<dt><a href="#">Consectetur adipisicing elit?</a></dt>
+		<dd>Consectetur adipisicing elit. Et eius, numquam similique iusto corporis, nobis libero magnam dolorem laudantium aperiam, enim ex impedit neque ipsam optio recusandae culpa aliquam illo.</dd>
+		<dt><a href="#">Tempore, aliquid, adipisci?</a></dt>
+		<dd>Tempore, aliquid, adipisci? Labore quisquam necessitatibus neque laborum ab officia magni dolor. Reiciendis facere possimus nobis, adipisci cum magnam, culpa laborum ratione.</dd>
+		<dt><a href="#">Voluptatem sit consectetur?</a></dt>
+		<dd>Voluptatem sit consectetur reiciendis aut autem veritatis incidunt! Temporibus, eum eligendi ipsa sit, distinctio provident ipsum autem odio voluptas cupiditate quod sed.</dd>
+		<dt><a href="#">Doloremque aliquid?</a></dt>
+		<dd>Doloremque aliquid, earum debitis ducimus fugiat suscipit amet asperiores eveniet ipsa eius dolorum enim obcaecati iste aut molestias cupiditate nam incidunt blanditiis!</dd>
+	</dl>
+	<noscript>
+		Моля, разрешете използването на JS за да ползвате ....
+	</noscript>
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('dd').hide();
+
+			$('dt').click( function(){
+				$('dd').hide();
+				$(this).next().slideToggle();
+			});//on dt click			
+		});//on document ready
+	</script>
+</body>
+</html>
