@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+</head>
+<style>
+	ul li+li {
+    	display: none;
+	}
+	ul {
+	    list-style: none;
+	}
+</style>
+<body>
+	<ul id="gallery">
+		<li><a href="#"><img src="./pics-large/pic1-320x240.jpg" alt=""></a></li>
+		<li><a href="#"><img src="./pics-large/pic2-320x240.jpg" alt=""></a></li>
+		<li><a href="#"><img src="./pics-large/pic3-320x240.jpg" alt=""></a></li>
+		<li><a href="#"><img src="./pics-large/pic4-320x240.jpg" alt=""></a></li>
+		<li><a href="#"><img src="./pics-large/pic5-320x240.jpg" alt=""></a></li>
+	</ul>
+	<input type="button" id="prv" value="Previous">
+	<input type="button" id="btn" value="Auto">
+	<input type="button" id="nxt" value="Next">
+	<noscript>
+		Моля, разрешете използването на JS за да ползвате ....
+	</noscript>
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script>
+
+		$(document).ready(function(){
+
+			$('#prv').click( function(){
+				$('#gallery li:last-child').prependTo('#gallery');
+			}); //on button next click
+
+			$('#nxt').click( function(){
+				showNextImage('#gallery li:first-child','#gallery');
+			}); //on button next click
+
+			var intervalId=0;
+
+			$('#btn').click( function(){
+				if( intervalId != 0){
+					$(this).val("Auto");
+					clearInterval(intervalId);	
+					intervalId = 0;
+
+				}
+				else{
+					$(this).val("Stop");
+					intervalId = setInterval(function(){
+						showNextImage('#gallery li:first-child','#gallery');
+							}, 2000);//set interval
+				}
+
+			});//on btn click	
+				
+
+		});//on document ready
+		//-----------------------------------------------
+		function showNextImage(item, where){
+			$(item).appendTo(where);
+		}
+	</script>
+</body>
+</html>
